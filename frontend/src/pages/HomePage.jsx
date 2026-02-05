@@ -30,9 +30,7 @@ function HomePage() {
       <div className='max-w-7xl p-4 m-2  '>
         {loading && <div className='text-white'>Loading notes...</div>}
         {!notes.length && (
-          <div className='text-white text-xl font-bold text-center'>
-            Create New Note
-          </div>
+          <div className='text-white text-xl font-bold '>Create New Note</div>
         )}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
           {notes.map((note) => (
