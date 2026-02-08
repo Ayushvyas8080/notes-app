@@ -15,10 +15,9 @@ function Notecard({ note, setNotes }) {
     }
   };
 
-  const handleEdit = () => {};
   return (
     <Link
-      to={`/note/${note._id}`}
+      to={`/notes/${note._id}`}
       className='bg-stone-800  w-min h-min text-white rounded-lg p-4'
     >
       <div className='flex flex-col '>
@@ -26,13 +25,9 @@ function Notecard({ note, setNotes }) {
         <p className='text-stone-400 mb-2'>{note.content}</p>
         <div className='flex gap-4'>
           <span className='text-zinc-200'>{formatDate(note.createdAt)}</span>
-          <div className=' flex gap-2 '>
-            <button className='cursor-pointer bg-blue-500 rounded-md'>
-              Edit
-            </button>
-
+          <div>
             <button
-              className='cursor-pointer  bg-red-600 rounded-md'
+              className='cursor-pointer  bg-red-600 rounded-md p-2'
               onClick={(e) => handleDelete(e, note._id)}
             >
               Delete
