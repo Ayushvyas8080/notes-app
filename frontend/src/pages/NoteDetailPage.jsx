@@ -1,8 +1,21 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+
+  const { id } = useParams();
+
+
+  useEffect(()=> {
+    const fetchNotes = async () => {
+      try {
+        const res = await api.get(`/notes/${id}`)
+      }
+    }
+  })
   return (
     <div>
       <div>
